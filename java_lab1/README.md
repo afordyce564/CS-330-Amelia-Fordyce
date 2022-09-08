@@ -2,14 +2,14 @@
 
 ## This folder contains all questions from Java Lab 1
 
-nextYear.java
+### nextYear.java
 
-wideningTest.java
+### wideningTest.java
 
-buyingArray.java
+### buyingArray.java
 
-chars_and_strings.java
-  Sources
+### chars_and_strings.java
+  #### Sources
 
-arrayListIntegers.java
-  Sources
+### arrayListIntegers.java
+  #### Sources
