@@ -51,7 +51,7 @@ how did you pick the one that you'll be using?
 
   Writing comments in Go is similar to Java because you denote comments with //
 
-###Sources
+### Sources
   - https://kuree.gitbooks.io/the-go-programming-language-report/content/16/text.html
   - https://devopedia.org/go-language
   - https://www.digitalocean.com/community/tutorials/how-to-write-comments-in-go
