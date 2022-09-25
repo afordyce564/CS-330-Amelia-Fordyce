@@ -27,7 +27,6 @@ What about naming conventions? Are those enforced by the compiler/interpreter, o
 
 
 6. Are some variables mutable while others are immutable? 
-
 	Strings are the only variable type in this language that is immutable. 
 
 
@@ -42,6 +41,7 @@ What about naming conventions? Are those enforced by the compiler/interpreter, o
 	mul_op     = "*" | "/" | "%" | "<<" | ">>" | "&" | "&^" .
 
 	unary_op   = "+" | "-" | "!" | "^" | "*" | "&" | "<-" .
+	
 
 8. Are mixed type operations allowed? If so, how are they accommodated? 
 
