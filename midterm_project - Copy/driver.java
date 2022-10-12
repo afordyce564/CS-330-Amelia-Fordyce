@@ -35,13 +35,15 @@ public class driver{
              //match class and main method declarations
     //why don't my patterns match even though they match in pythex???
     //the class_dec won't match anything :(
-            String class_dec_pattern = "(\s?public class{1}\s?[a-z]*[A-Z]*\s?[a-z]*[A-Z]*[-_]*\s?[a-z]*[A-Z]*[-_]*\s?[a-z]*[A-Z]*[-_]*)";
-            String main_method_dec_pattern = "(\s?public static void main[(]{1}String\s{0,}arg[a-z]?\\S?\\s?\\S?[)])";
-            String statementPattern  = "(\s?[a-z]*[0-9]*\s?[=+_/*]{1}\s?[0-9]*[a-z]*\s?[=+_/*]{1}\s?[0-9]*[a-z]*)";
+            String class_dec_pattern = ".+(\s?public class{1}\s?[a-z]*[A-Z]*\s?[a-z]*[A-Z]*[-_]*\s?[a-z]*[A-Z]*[-_]*\s?[a-z]*[A-Z]*[-_]*).+";
+            String main_method_dec_pattern = ".+(\s?public static void main[(]{1}String\s{0,}arg[a-z]?\\S?\\s?\\S?[)]).+";
+            //String statementPattern  = "(\s?[a-z]*[0-9]*\s?[=+_/*]{1}\s?[0-9]*[a-z]*\s?[=+_/*]{1}\s?[0-9]*[a-z]*)";
+            String simple_output_pattern = ".+(\s?System[.]{1}out[.]{1}println[(]{1}[\"]+[A-Z]*[a-z]*\s?[a-z]*[,'._]*[a-z]+[A-Z]*\s?[a-z]*[,'._]*[a-z]*[A-Z]*\s?[a-z]*[,'._]*[a-z]*[A-Z]*\s?[a-z]*[,'._]*[a-z]*[A-Z]*[\"]?[)]{1}).+";
           
             boolean test_class_dec = Pattern.matches(class_dec_pattern, wholeProgram);
             boolean test_svm_dec = Pattern.matches(main_method_dec_pattern, wholeProgram);
-            boolean test_statement = Pattern.matches(statementPattern, wholeProgram);
+            //boolean test_statement = Pattern.matches(statementPattern, wholeProgram);
+            boolean test_simple_output_dec = Pattern.matches(simple_output_pattern, wholeProgram);
 
             System.out.println("------------------------\n\nClass Declaration");
             System.out.println(test_class_dec);
@@ -49,8 +51,11 @@ public class driver{
             System.out.println("------------------------\n\nMain Method");
             System.out.println(test_svm_dec);
 
-            System.out.println("------------------------\n\nArithmetic Statement");
-            System.out.println(test_statement);
+            //System.out.println("------------------------\n\nArithmetic Statement");
+            //System.out.println(test_statement);
+
+            System.out.println("------------------------\n\nSimple Output");
+            System.out.println(test_simple_output_dec);
 
          } 
         catch (FileNotFoundException e) {

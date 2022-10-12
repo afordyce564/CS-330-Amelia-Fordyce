@@ -49,13 +49,13 @@ class TemperatureNoLimits{
 
 class TempTestDriver{
    public static void main(String argv[]){
-      Scanner keyb = new Scanner (System.in);
+      Scanner key = new Scanner (System.in);
       
       System.out.println("What is the temp in Farenheit?");
-      double ftemp = keyb.nextDouble(); 
+      double ftemp = key.nextDouble(); 
       TemperatureNoLimits t1 = new TemperatureNoLimits(ftemp);
      
       System.out.println("that's " + t1.getKelvin() + " K"); 
-   
+   key.close();
    }
 }

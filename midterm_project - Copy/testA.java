@@ -1,4 +1,5 @@
-import java.util.*;
+//import java.util.*;
+import java.util.Scanner;
 
 public class testA{
    
@@ -18,6 +19,7 @@ public class testA{
       }
       double celsius= f2c(today);
       System.out.println(today + " F ="+celsius + " C");  
+      sc.close();
       	      	
    }
    
