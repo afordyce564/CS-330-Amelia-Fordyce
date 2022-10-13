@@ -8,7 +8,7 @@
 
 ### 2. What types of conditional statements are available in your language?  (if/else, if/then/else, if/elseif/else).  Does your language allow for statements other than “if” (for example, Perl has an “unless” statement, which does the opposite of “if”!)
 
-  if, else if, and else are available in Go. You can write an if statement with a short declaration statement. The variable declared in the short statement in the if statement and it's else if/else statements
+  if, else if, and else are available in Go. You can write an if statement with a short declaration statement. The variable declared in the short statement in the if statement and it's else if/else statements. If you write an if/else if/else chain, you cannot write the else if on a new line. It will give you an error that it found else. 
 
 
 
