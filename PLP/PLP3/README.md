@@ -8,12 +8,15 @@
 
 ### 2. What types of conditional statements are available in your language?  (if/else, if/then/else, if/elseif/else).  Does your language allow for statements other than “if” (for example, Perl has an “unless” statement, which does the opposite of “if”!)
 
-  	if, else if, and else are available in Go. You can write an if statement with a short declaration statement. The variable declared in the short statement in the if statement and it's else if/else statements. If you write an if/else if/else chain, you cannot write the else if on a new line. It will give you an error that it found else. 
+  	if, else if, and else are available in Go. You can write an if statement with a short declaration statement. 
+	The variable declared in the short statement in the if statement and it's else if/else statements. 
+	If you write an if/else if/else chain, you cannot write the else if on a new line. It will give you an error that it found else. 
 
 
 
 ### 3. How does your language delimit code blocks under each condition in selection control statements?
-    	Go delimits code blocks under if/else if conditions with a tab. It delimits code blocks under switch statements with a tab and the "case" keyword. 
+    	Go delimits code blocks under if/else if conditions with a tab. 
+	It delimits code blocks under switch statements with a tab and the "case" keyword. 
       
 
 ### 4. Does your language use short-circuit evaluation?  Include an example of the short-circuit logic working or not working (or both, if your language is like Java and supports both!)
@@ -28,7 +31,8 @@
 
 ### 6. If your language supports switch or case statements, do you have to use “break” to get out of them?  Can you use “continue” to have all of the conditions evaluated? 
   
-  	Go supports switch statements and does not require the "break" keyword to get out of each case. It seems like you can use continue as a keyword but it does not have overall effect on the rest of the switch statement. 
+  	Go supports switch statements and does not require the "break" keyword to get out of each case. 
+	It seems like you can use continue as a keyword but it does not have overall effect on the rest of the switch statement. 
 	
 
 ### Sources
