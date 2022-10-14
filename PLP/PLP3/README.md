@@ -1,4 +1,4 @@
-## Data Types
+## Selection and Conditional Statements
 
 ### 1. What are the boolean values in your language? (e.g., True and False, true and false, 1, and 0, etc.) 
 
