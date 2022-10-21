@@ -1,4 +1,4 @@
-## Loops and Functions
+## PLP 4 Loops and Functions
 
 ### 1. Does your language include multiple types of loops (while, do/while, for, foreach)?  If so, what are they and how do they differ from each other?
     Go includes the for loop only. It "unfies" for and while. There is no do/while or foreach loop in Go. 
