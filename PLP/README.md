@@ -210,23 +210,26 @@ What about naming conventions? Are those enforced by the compiler/interpreter, o
 ### 2. What is the syntax for declaring a function in your language?
     This is the syntax
     
-    func (file *File) Write(b []byte) (n int, err error)
+    func functionName (parameters) {}
     
 ### 3. Are there any rules about where the function has to be placed in your code file so that it can run?
-      *Check this later*
+      Functions that are referenced in the main function have to be written above it. 
     
 ### 4. Does your language support recursive functions?
-    Yes with some examples
+    Go does support recursive functions. The base case has to be written before the main call. The recursive function needs to be called in the main function. 
     
 ### 5. Can functions in your language accept multiple parameters?  Can they be of different data types?
-    Functions in Go can accept multiple parameters with different data types (check)
+    Functions in Go can accept multiple parameters with different data types. 
     
 ### 6. Can functions in your language return multiple values at the same time?  How is that implemented?  If not, are there ways around that problem?  What are they?
     Go functions can return multiple values at the same time. You can return multiple values with one reutrn statement. 
     
 ### 7. Is your language pass-by reference or value?  Check your code against outside sources in case there is anything tricky going on (like in Perl).
 	Go is pass-by reference and pass-by value. There is code in the source list that has good examples of how both run in Go. 
+	
 ### 8. Where are the arguments, parameters and local variables stored (value-on-stack, ref-to-heap-on stack) during execution?
+	Arguments, parameters, and local variables are stored value on stack during execution. 
+	
 ### 9. What are the scoping rules in your language (visibility and lifetime of variables before, during and after code blocks)? Are loop code block variables treated differently than function code blocks?
 	`package main
 
@@ -267,10 +270,11 @@ What about naming conventions? Are those enforced by the compiler/interpreter, o
 	}
 `
 ### 10. Are side-effects possible? Are there guard rails against side-effects?
-	Side effects are possible in Go. Will find out about guard rails
+	Side effects are possible in Go. It doesn't seem like there are guard rails. 
 	
 ### 11. Where are local Are there any other aspects of functions in your language that aren't specifically asked about here, but that are important to know in order to write one?  What are they? (e.g. dynamic vs static scope)
 	Go is lexically scoped using blocks. It has a static scope. 
+	
 ## Sources
   - https://www.callicoder.com/golang-control-flow/
   - https://kuree.gitbooks.io/the-go-programming-language-report/content/22/text.html
@@ -287,5 +291,8 @@ What about naming conventions? Are those enforced by the compiler/interpreter, o
   - https://david-yappeter.medium.com/golang-pass-by-value-vs-pass-by-reference-e48aac8b2716
   - https://kuree.gitbooks.io/the-go-programming-language-report/content/24/text.html
   - https://kodify.net/go/while-loop/#code-a-go-while-loop-with-for
+  - https://www.ardanlabs.com/blog/2013/09/recursion-and-tail-calls-in-go_26.html
+  - https://stackoverflow.com/questions/28541609/looking-for-reasonable-stack-implementation-in-golang
+  - https://www.reddit.com/r/golang/comments/f7i3cz/why_does_programming_with_side_effects_seem_to_be/
 
 
