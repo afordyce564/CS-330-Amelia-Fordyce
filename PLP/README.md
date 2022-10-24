@@ -202,11 +202,52 @@ What about naming conventions? Are those enforced by the compiler/interpreter, o
     Go functions can return multiple values at the same time. You can return multiple values with one reutrn statement. 
     
 ### 7. Is your language pass-by reference or value?  Check your code against outside sources in case there is anything tricky going on (like in Perl).
+	Go is pass-by reference and pass-by value. There is code in the source list that has good examples of how both run in Go. 
 ### 8. Where are the arguments, parameters and local variables stored (value-on-stack, ref-to-heap-on stack) during execution?
-### 9. What are the scoping rules in your language (visibility and lifetime of variables before, during and after code blocks)? Are loop code block variables treated ### differently than function code blocks?
+### 9. What are the scoping rules in your language (visibility and lifetime of variables before, during and after code blocks)? Are loop code block variables treated differently than function code blocks?
+	`package main
+
+	import "fmt"
+
+	func main() {
+		var f bool = false
+
+		//local variable, can only be used in function
+		var t bool = true
+
+		fmt.Println(t)
+
+		//Question 2: example of conditional statements
+		if t != true {
+			fmt.Println("weird")
+		} else if f != false {
+			fmt.Println("also weird")
+		} else {
+			fmt.Println("everything is okay!")
+		}
+	//will not work
+	fmt.println(t)
+	
+	
+	//will not run unless it's in a function
+	flavors := []string{"chocolate", "vanilla", "strawberry", "banana"}
+	for _, flav := range flavors {
+		switch flav {
+		case "strawberry":
+			fmt.Println(flav, "is my favorite!")
+			continue
+		case "vanilla", "chocolate":
+			fmt.Println(flav, "is great!")
+		default:
+			fmt.Println("I've never tried", flav, "before")
+		}
+	}
+`
 ### 10. Are side-effects possible? Are there guard rails against side-effects?
+	Side effects are possible in Go. Will find out about guard rails
+	
 ### 11. Where are local Are there any other aspects of functions in your language that aren't specifically asked about here, but that are important to know in order to write one?  What are they? (e.g. dynamic vs static scope)
- 
+	Go is lexically scoped using blocks. It has a static scope. 
 ## Sources
   - https://www.callicoder.com/golang-control-flow/
   - https://kuree.gitbooks.io/the-go-programming-language-report/content/22/text.html
@@ -220,5 +261,7 @@ What about naming conventions? Are those enforced by the compiler/interpreter, o
   - https://datafloq.com/read/go-language-benefits-limitations/
   - https://www.geeksforgeeks.org/go-variables/?ref=lbp
   - https://www.digitalocean.com/community/tutorials/how-to-do-math-in-go-with-operators
+  - https://david-yappeter.medium.com/golang-pass-by-value-vs-pass-by-reference-e48aac8b2716
+  - https://kuree.gitbooks.io/the-go-programming-language-report/content/24/text.html
 
 
