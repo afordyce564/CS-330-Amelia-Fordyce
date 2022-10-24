@@ -150,7 +150,7 @@ What about naming conventions? Are those enforced by the compiler/interpreter, o
 ### 1. What are the boolean values in your language? (e.g., True and False, true and false, 1, and 0, etc.) 
 
   	The boolean values in Go are true and false. The zero-value for a boolean is false. The one-value for a boolean is true. 
-	.  
+	
 
 
 ### 2. What types of conditional statements are available in your language?  (if/else, if/then/else, if/elseif/else).  Does your language allow for statements other than “if” (for example, Perl has an “unless” statement, which does the opposite of “if”!)
@@ -184,9 +184,32 @@ What about naming conventions? Are those enforced by the compiler/interpreter, o
 ## PLP 4 Loops and Functions
 
 ### 1. Does your language include multiple types of loops (while, do/while, for, foreach)?  If so, what are they and how do they differ from each other?
-    Go includes the for loop only. It "unfies" for and while. There is no do/while or foreach loop in Go. 
+    Go includes the for loop only. It "unfies" for and while. There is no do/while or foreach loop in Go. You can attempt to write a while loop by writing a for loop with a boolean condition. You can try to write a do-while loop as well using a for loop. 
+    
+    ```
+    //while loop in go?
+    var i = 1
+	for i < 5 {
+		fmt.Println("not 5")
+		i++
+
+	}
+	```
+	
+   ```
+   //do-while in go?
+   	//do-while loop?
+	for {
+		main()
+		if !true {
+			break
+		}
+	}
+   ```
     
 ### 2. What is the syntax for declaring a function in your language?
+    This is the syntax
+    
     func (file *File) Write(b []byte) (n int, err error)
     
 ### 3. Are there any rules about where the function has to be placed in your code file so that it can run?
@@ -225,11 +248,11 @@ What about naming conventions? Are those enforced by the compiler/interpreter, o
 		} else {
 			fmt.Println("everything is okay!")
 		}
-	//will not work
+	//will work
 	fmt.println(t)
 	
 	
-	//will not run unless it's in a function
+	//will run even when it's not in a function
 	flavors := []string{"chocolate", "vanilla", "strawberry", "banana"}
 	for _, flav := range flavors {
 		switch flav {
@@ -263,5 +286,6 @@ What about naming conventions? Are those enforced by the compiler/interpreter, o
   - https://www.digitalocean.com/community/tutorials/how-to-do-math-in-go-with-operators
   - https://david-yappeter.medium.com/golang-pass-by-value-vs-pass-by-reference-e48aac8b2716
   - https://kuree.gitbooks.io/the-go-programming-language-report/content/24/text.html
+  - https://kodify.net/go/while-loop/#code-a-go-while-loop-with-for
 
 
