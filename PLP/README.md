@@ -274,6 +274,14 @@ What about naming conventions? Are those enforced by the compiler/interpreter, o
 	
 ### 11. Where are local Are there any other aspects of functions in your language that aren't specifically asked about here, but that are important to know in order to write one?  What are they? (e.g. dynamic vs static scope)
 	Go is lexically scoped using blocks. It has a static scope. 
+
+## PLP 5 Objects
+
+## PLP 6 Final Coding Project Proposal
+	### Part 1 Program
+		Choose your own adventure game
+	
+	### Part 2 Presentation
 	
 ## Sources
   - https://www.callicoder.com/golang-control-flow/
