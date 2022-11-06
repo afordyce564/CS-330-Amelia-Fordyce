@@ -272,16 +272,21 @@ What about naming conventions? Are those enforced by the compiler/interpreter, o
 ### 10. Are side-effects possible? Are there guard rails against side-effects?
 	Side effects are possible in Go. It doesn't seem like there are guard rails. 
 	
-### 11. Where are local Are there any other aspects of functions in your language that aren't specifically asked about here, but that are important to know in order to write one?  What are they? (e.g. dynamic vs static scope)
+### 11. Where arelocal Are there any other aspects of functions in your language that aren't specifically asked about here, but that are important to know in order to write one?  What are they? (e.g. dynamic vs static scope)
 	Go is lexically scoped using blocks. It has a static scope. 
 
 ## PLP 5 Objects
 
 ## PLP 6 Final Coding Project Proposal
-	### Part 1 Program
-		Choose your own adventure game
-	
-	### Part 2 Presentation
+	The main idea is to make a "deluxe version" of sorts of the choose your own adventure game we made in CS112. There will be more paths with the player starting outside a cave. There will be a definitive destination the player has to go to. The program we wrote randomly chose caves for the player to interact with. 
+
+
+	- Functions will be created to simulate each location a player goes to and the statements will clue the player into the challenge in each place
+	- User Input will be used for actions or choosing which path to go
+	- Data Structures - not sure which ones will be used, but could use a dictionary to keep track of inventory
+	- Player object that has name attribute
+	- GUIS in Go are only available with Go packages, will most likely be used to show inventory, health, coins, etc
+	- 
 	
 ## Sources
   - https://www.callicoder.com/golang-control-flow/
