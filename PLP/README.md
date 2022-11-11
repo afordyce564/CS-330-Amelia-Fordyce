@@ -286,7 +286,22 @@ What about naming conventions? Are those enforced by the compiler/interpreter, o
 	- Data Structures - not sure which ones will be used, but could use a dictionary to keep track of inventory
 	- Player object that has name attribute
 	- GUIS in Go are only available with Go packages, will most likely be used to show inventory, health, coins, etc
-	- 
+	- The user can cancel at any time they want because the option will be a part of user input
+	
+
+	Functions 
+	- attribute_location: There will be at least 10 different locations to go to on the path. Based on user input, a different function will be called.
+	
+	Objects
+	- Player object: will have attributes name, inventory, health, and coins
+	- Path object: will have attribute for location
+	
+	Variables
+	- Inventory: array
+	- Health: int
+	- Coins: float
+	- name: String
+	- Path: location
 	
 ## Sources
   - https://www.callicoder.com/golang-control-flow/
