@@ -276,33 +276,116 @@ What about naming conventions? Are those enforced by the compiler/interpreter, o
 	Go is lexically scoped using blocks. It has a static scope. 
 
 ## PLP 5 Objects
+
+### 1. Does your language support objects or something similar (e.g., structs or records)?
 	
-    Create an object (a simple Person or Date object is fine)
-    Give the object class attributes (aka instance variables)
-    Give the object functions
-    Create an object that inherits from the first object (e.g., Student or Appointment) with some attributes and functions of its own
-    Test how to instantiate both types of objects, call their functions, and modify their variables.
+	Go supports structs instead of objects, but they function similarly to objects. They have attributes and methods just like an object would. 
+	
+### 2. Are there naming conventions for objects, instance variables, or functions that people writing in your language should be aware of?
+		As seen with variable declarations in Go, you need to write the variable name as variableName type instead of the other way round. Structs do not use a special struct keyword, they are declared using the type keyword followed by the className and the keyword struct. 
+		
 
- 
-
-	For your write-up, address the following items:
-
-    	Does your language support objects or something similar (e.g., structs or records)?
-        	Are there naming conventions for objects, instance variables, or functions that people writing in your language should be aware of?
-    	Does your language have standard methods for functions that serve a similar purpose across all objects? For example, toString() in Java and __str__ in Python 		allow information about the objects to be printed. Are there similar functions in your language?
-    	How does inheritance work (if it does)? Does your language support multiple inheritance?
+### 3. Does your language have standard methods for functions that serve a similar purpose across all objects? For example, toString() in Java and __str__ in Python 		allow information about the objects to be printed. Are there similar functions in your language?
+	
+	It is possible to create a normal toString() function in Go. You can also create the parent and child objects first. Write functions for each struct to print their attributes. I only wrote one attribute for each struct. In the main function create a child struct where the attributes of parent and child structs can be accessed. It is possible to write print statements that call the the separate print statements. 
+    	
+### 4. How does inheritance work (if it does)? Does your language support multiple inheritance?
     		If there is inheritance, how does your language deal with overloading method names and resolving those calls?
     		Is there anything else that’s important to know about objects and inheritance in your language?
 
 	If your language doesn't support anything like this, then explain why not and what it does instead, or how people work around not having those things.
+	
+### Code 
+	```
+	/*
+ * Goal: Build a really good choose your own adventure game
+ * One step at a time
+ * Sources
+	- https://www.w3schools.com/go/go_struct.php
+	- https://www.geeksforgeeks.org/class-and-object-in-golang/
+	https://code.tutsplus.com/tutorials/lets-go-object-oriented-programming-in-golang--cms-26540
+	- https://golangdocs.com/inheritance-in-golang
+*/
 
- 
+// Golang program to illustrate the
+// concept of multiple inheritances
+package main
 
-	As always, write out the answers to these questions as though you were writing a guide for a new learner.  Make your answers as clear as possible, and don't just answer the questions in one or two words.  Explain the reasoning behind the answers as much as possible.  If there is no clear-cut answer to a question, explain why not.  And cite your sources! 
+import (
+	"fmt"
+)
 
- 
+// declaring first
+// base struct
+type person struct {
 
-	Post both your example code and your written answers.
+	// declaring struct variable
+	name string
+}
+
+// declaring second
+// base struct
+type member struct {
+
+	// declaring struct variable
+	club string
+}
+
+// function to return
+// first struct variable
+func (p person) printPerson() string {
+
+	// returns a string
+	// of first struct
+	return p.name
+}
+
+// function to return
+// second struct variable
+func (m member) printMember() string {
+
+	// returns a string
+	// of first struct
+	return m.club
+}
+
+// child struct which
+// embeds both base structs
+type child struct {
+
+	// anonymous fields,
+	// struct embedding
+	// of multiple structs
+	person
+	member
+}
+
+// main function
+func main() {
+
+	// declaring an instance
+	// of child struct
+	c1 := child{
+
+		// child struct can directly
+		// access base struct variables
+		person{
+			name: "Amelia",
+		},
+		member{
+			club: "MCS Liaison",
+		},
+	}
+
+	// child struct can directly
+	// access base struct methods
+
+	// printing base method
+	// using instance of child struct
+	fmt.Println(c1.printPerson())
+	fmt.Println(c1.printMember())
+}
+```	
 
 ## PLP 6 Final Coding Project Proposal
 	The main idea is to make a "deluxe version" of sorts of the choose your own adventure game we made in CS112. There will be more paths with the player starting outside a cave. There will be a definitive destination the player has to go to. The program we wrote randomly chose caves for the player to interact with. 
@@ -349,5 +432,6 @@ What about naming conventions? Are those enforced by the compiler/interpreter, o
   - https://www.ardanlabs.com/blog/2013/09/recursion-and-tail-calls-in-go_26.html
   - https://stackoverflow.com/questions/28541609/looking-for-reasonable-stack-implementation-in-golang
   - https://www.reddit.com/r/golang/comments/f7i3cz/why_does_programming_with_side_effects_seem_to_be/
+  - https://www.geeksforgeeks.org/inheritance-in-golang/
 
 
