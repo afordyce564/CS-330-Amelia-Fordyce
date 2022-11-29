@@ -40,7 +40,7 @@ Resources
 - https://www.w3schools.com/go/index.php 
 - https://www.tutorialspoint.com/go/index.htm
 
-### Get Started
+### PLP 2 Get Started
 
 1. What did you need to do to install the language?
 
