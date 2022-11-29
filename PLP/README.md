@@ -16,7 +16,7 @@
 ### History
 
 1. What is the name of your language?
-  	The name of my language is Golang, or Go, for short. 
+  	The name of this language is Golang, or Go, for short. 
     
 2. When/where was it created, and by whom? Was it written to address a particular problem or
 need?
@@ -277,23 +277,25 @@ What about naming conventions? Are those enforced by the compiler/interpreter, o
 
 ## PLP 5 Objects
 
-### 1. Does your language support objects or something similar (e.g., structs or records)?
+### 1. Does your language support objects or something similar (e.g., structs or records)? Are there naming conventions for objects, instance variables, or functions that people writing in your language should be aware of?
 	
 	Go supports structs instead of objects, but they function similarly to objects. They have attributes and methods just like an object would. 
-	
-### 2. Are there naming conventions for objects, instance variables, or functions that people writing in your language should be aware of?
-		As seen with variable declarations in Go, you need to write the variable name as variableName type instead of the other way round. Structs do not use a special struct keyword, they are declared using the type keyword followed by the className and the keyword struct. 
+	As seen with variable declarations in Go, you need to write the variable name as variableName type instead of the other way round. Structs do not use a special struct keyword, they are declared using the type keyword followed by the className and the keyword struct. 
 		
 
-### 3. Does your language have standard methods for functions that serve a similar purpose across all objects? For example, toString() in Java and __str__ in Python 		allow information about the objects to be printed. Are there similar functions in your language?
+### 2. Does your language have standard methods for functions that serve a similar purpose across all objects? For example, toString() in Java and __str__ in Python 		allow information about the objects to be printed. Are there similar functions in your language?
 	
-	It is possible to create a normal toString() function in Go. You can also create the parent and child objects first. Write functions for each struct to print their attributes. I only wrote one attribute for each struct. In the main function create a child struct where the attributes of parent and child structs can be accessed. It is possible to write print statements that call the the separate print statements. 
+	It is possible to create a normal toString() function in Go. You can also create the parent and child objects first. Write functions for each struct to print their attributes. I only wrote one attribute for each struct. In the main function create a child struct where the attributes of parent and child structs can be accessed. It is possible to write print statements that call the the separate print functions. 
     	
-### 4. How does inheritance work (if it does)? Does your language support multiple inheritance?
-    		If there is inheritance, how does your language deal with overloading method names and resolving those calls?
-    		Is there anything else that’s important to know about objects and inheritance in your language?
+### 3. How does inheritance work (if it does)? Does your language support multiple inheritance?
+	It is possible to inherit parent classes in Go. You can define both parent and child structs in the same program. After that, you need to define a child struct that inherits the structs you wrote before this one. In the main function, you declare an instance of a child object and declare its values within the context of a parent struct. Go supports multiple inheritance.
 
-	If your language doesn't support anything like this, then explain why not and what it does instead, or how people work around not having those things.
+## 4. If there is inheritance, how does your language deal with overloading method names and resolving those calls?
+	 The child can access the parent's methods. 
+
+### 5. Is there anything else that’s important to know about objects and inheritance in your language? If your language doesn't support anything like this, then explain why not and what it does instead, or how people work around not having those things.
+
+	Structs in Go are similar to structs in C. 
 	
 ### Code 
 	```
