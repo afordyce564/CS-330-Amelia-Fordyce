@@ -291,11 +291,11 @@ What about naming conventions? Are those enforced by the compiler/interpreter, o
 	It is possible to inherit parent classes in Go. You can define both parent and child structs in the same program. After that, you need to define a child struct that inherits the structs you wrote before this one. In the main function, you declare an instance of a child object and declare its values within the context of a parent struct. Go supports multiple inheritance.
 
 ## 4. If there is inheritance, how does your language deal with overloading method names and resolving those calls?
-	 The child can access the parent's methods. 
+	 The child object can access the parent's methods by creating a child struct that has parent classes for attributes. Go does not have overloaded functions. It only does function overloading with optional parameters. You can simulate this with a variadic function, which accepts a variable number of parameters. With this overloading, you lose type checking.
 
 ### 5. Is there anything else that’s important to know about objects and inheritance in your language? If your language doesn't support anything like this, then explain why not and what it does instead, or how people work around not having those things.
 
-	Structs in Go are similar to structs in C. 
+	You can create an anomynous struct in Go, which means that it will only create a struct variable and not a new struct type. You can also create nested structs, which are structs with attributes with the struct type. 
 	
 ### Code 
 	```
@@ -435,5 +435,7 @@ func main() {
   - https://stackoverflow.com/questions/28541609/looking-for-reasonable-stack-implementation-in-golang
   - https://www.reddit.com/r/golang/comments/f7i3cz/why_does_programming_with_side_effects_seem_to_be/
   - https://www.geeksforgeeks.org/inheritance-in-golang/
+  - http://changelog.ca/log/2015/01/30/golang
+  - https://golangbot.com/structs/
 
 
