@@ -15,58 +15,51 @@
 
 ### History
 
-1. What is the name of your language?
-  	The name of this language is Golang, or Go, for short. 
-    
-2. When/where was it created, and by whom? Was it written to address a particular problem or
-need?
-    Go was created in 2007 by Google. It was developed by Robert Griesemer, Rob Pike, and Ken Thompson. It was written to address its own problems in relation to multicore processors, networked systems and large codebases. Go was also designed to simplify the development of multithreaded applications and encourage concurrent programming. The language is based on C++, Java, and Python
+  1. What is the name of your language?
+  	
+	The name of this language is Golang, or Go, for short. 
 
-3. What types of programming is your language primarily used for (ex: web sites, video games,
-mobile devices, parsing, etc.)? If your language is multi-purpose, provide some examples of
-different projects it's been used for.
+  2. When/where was it created, and by whom? Was it written to address a particular problem or
+	need?
+	
+	Go was created in 2007 by Google. It was developed by Robert Griesemer, Rob Pike, and Ken Thompson. It was written to address its own problems in relation to multicore processors, networked systems and large codebases. Go was also designed to simplify the development of multithreaded applications and encourage concurrent programming. The language is based on C++, Java, and Python
 
-Go can be used for server-side apps with support for multiple threads, cross-platform CLI tools, and other systems programming. 
+3. What types of programming is your language primarily used for (ex: web sites, video games, mobile devices, parsing, etc.)? If your language is multi-purpose, provide some examples of different projects it's been used for.
+
+	Go can be used for server-side apps with support for multiple threads, cross-platform CLI tools, and other systems programming. 
 
 
-4. Where will you get information about this language when it's time to start programming in it?
-At the end of your assignment, provide a list of the names of books, website URLs, or any
-other resources that relate to your language in particular.
+4. Where will you get information about this language when it's time to start programming in it? At the end of your assignment, provide a list of the names of books, website URLs, or any other resources that relate to your language in particular.
 
-I will get information about Go from its documentation, the W3 schools tutorial, and the tutorialspoint tutorial
+	I will get information about Go from its documentation, the W3 schools tutorial, and the tutorialspoint tutorial
 
-Resources
-- https://go.dev/doc/
-- https://www.w3schools.com/go/index.php 
-- https://www.tutorialspoint.com/go/index.htm
 
-### PLP 2 Get Started
+### Get Started
 
 1. What did you need to do to install the language?
+	
+	The installation of Go was pretty easy. First I downloaded the compiler from the Go website. (https://go.dev/dl/). I chose the latest build.
 
-  The installation of Go was pretty easy. First I downloaded the compiler from the Go website. (https://go.dev/dl/). I chose the latest build.
+2. Does this language come with a recommended programming environment? What is it? If not, how did you pick the one that you'll be using?
 
-2. Does this language come with a recommended programming environment? What is it? If not,
-how did you pick the one that you'll be using?
-  
-  The most recommended programming environment for Go is Visual Studio Code. There is an extension for Go developed by Google. 
+	The most recommended programming environment for Go is Visual Studio Code. There is an extension for Go developed by Google. 
 
 3. How do you run programs in that language?
-  
-   To run programs in Go, you need to write a main function that looks like this:
-   
-   func main(){
-	  fmt.Println("Hello World!")
-  }
-   
-   fmt is a popular module for Go that is for output
-   You can run Go programs in Visual Studio Code. 
-  
+
+	   To run programs in Go, you need to write a main function that looks like this:
+
+	   func main(){
+		  fmt.Println("Hello World!")
+	  }
+
+	   fmt is a popular module for Go that is for output
+	   You can run Go programs in Visual Studio Code. 
+
 4. How do you write comments in your language?
 
-  Writing comments in Go is similar to Java because you denote comments with //
+	  Writing comments in Go is similar to Java because you denote comments with //
   
-## PLP 3 Data Types
+## PLP 2 Data Types
 
 ### 1. Does your language have keywords or reserved words? How many?  
 
@@ -117,19 +110,17 @@ What about naming conventions? Are those enforced by the compiler/interpreter, o
 
 ### 9. At what point are identifier names and operator symbols bound in your language? For example  if you declare a (variable, class name, function name), when is it bound to the type, address?  When are operators (+,*, etc.) bound to their operations?  
 
-### Identifier names and operator symbols are bound in Go when variables, classes, and functions are declared. You declare variables with the var keyword and the type is automatically bound. 
-### CODING EXAMPLE demonstrating the features above 
-### 1 Adapted with permission from Dr. Amber Stubbs
-### EXAMPLE OF (one) ILLUSTRATIVE EXAMPLE:  
+	 Identifier names and operator symbols are bound in Go when variables, classes, and functions are declared. You declare variables with the var keyword and the type is automatically bound. 
+	 
 ### If you put this line (or something similar) in a program and try to print x, what does it do?  x = "5" + 6 
 
 	
-	You cannot compile that statement. You will get this error. 
+	You cannot compile that x = "5"+ 6. You will get this error. 
 
 	(mismatched types untyped string and untyped int)
 
 
-### If it doesn't compile, why? Is there something you can do to make it compile? 
+	### If it doesn't compile, why? Is there something you can do to make it compile? 
 
 	The above statement does not compile because the types are unmatched and the integer is untyped. 
 
@@ -145,7 +136,7 @@ What about naming conventions? Are those enforced by the compiler/interpreter, o
 
         Complex data types in Go are integers and floating point numbers.
 	
-## Selection and Conditional Statements
+## PLP 3 Selection and Conditional Statements
 
 ### 1. What are the boolean values in your language? (e.g., True and False, true and false, 1, and 0, etc.) 
 
@@ -158,8 +149,6 @@ What about naming conventions? Are those enforced by the compiler/interpreter, o
   	if, else if, and else are available in Go. You can write an if statement with a short declaration statement. 
 	The variable declared in the short statement in the if statement and it's else if/else statements. 
 	If you write an if/else if/else chain, you cannot write the else if on a new line. It will give you an error that it found else. 
-
-
 
 ### 3. How does your language delimit code blocks under each condition in selection control statements?
     	Go delimits code blocks under if/else if conditions with a tab. 
@@ -437,5 +426,8 @@ func main() {
   - https://www.geeksforgeeks.org/inheritance-in-golang/
   - http://changelog.ca/log/2015/01/30/golang
   - https://golangbot.com/structs/
+  - https://go.dev/doc/
+  - https://www.w3schools.com/go/index.php 
+  - https://www.tutorialspoint.com/go/index.htm
 
 
