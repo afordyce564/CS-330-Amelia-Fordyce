@@ -279,7 +279,7 @@ What about naming conventions? Are those enforced by the compiler/interpreter, o
 ### 3. How does inheritance work (if it does)? Does your language support multiple inheritance?
 	It is possible to inherit parent classes in Go. You can define both parent and child structs in the same program. After that, you need to define a child struct that inherits the structs you wrote before this one. In the main function, you declare an instance of a child object and declare its values within the context of a parent struct. Go supports multiple inheritance.
 
-## 4. If there is inheritance, how does your language deal with overloading method names and resolving those calls?
+### 4. If there is inheritance, how does your language deal with overloading method names and resolving those calls?
 	 The child object can access the parent's methods by creating a child struct that has parent classes for attributes. Go does not have overloaded functions. It only does function overloading with optional parameters. You can simulate this with a variadic function, which accepts a variable number of parameters. With this overloading, you lose type checking.
 
 ### 5. Is there anything else that’s important to know about objects and inheritance in your language? If your language doesn't support anything like this, then explain why not and what it does instead, or how people work around not having those things.
@@ -287,15 +287,10 @@ What about naming conventions? Are those enforced by the compiler/interpreter, o
 	You can create an anomynous struct in Go, which means that it will only create a struct variable and not a new struct type. You can also create nested structs, which are structs with attributes with the struct type. 
 	
 ### Code 
-	```
+```
 	/*
  * Goal: Build a really good choose your own adventure game
  * One step at a time
- * Sources
-	- https://www.w3schools.com/go/go_struct.php
-	- https://www.geeksforgeeks.org/class-and-object-in-golang/
-	https://code.tutsplus.com/tutorials/lets-go-object-oriented-programming-in-golang--cms-26540
-	- https://golangdocs.com/inheritance-in-golang
 */
 
 // Golang program to illustrate the
@@ -429,5 +424,9 @@ func main() {
   - https://go.dev/doc/
   - https://www.w3schools.com/go/index.php 
   - https://www.tutorialspoint.com/go/index.htm
+  - https://www.w3schools.com/go/go_struct.php
+  - https://www.geeksforgeeks.org/class-and-object-in-golang/
+  - https://code.tutsplus.com/tutorials/lets-go-object-oriented-programming-in-golang--cms-26540
+  - https://golangdocs.com/inheritance-in-golang
 
 
