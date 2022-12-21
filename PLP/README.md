@@ -1,5 +1,7 @@
 # PLP folder for Amelia Fordyce
 
+## For code examples see folders for each section!
+
 ## PLP 0 
 
 ### Tutorial
