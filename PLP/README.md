@@ -10,6 +10,14 @@
   4. Import fmt module for printing to the console by writing import fmt
   5. Write the main function like this func main(){}
   6. Inside the main function, write your print statement like this: fmt.Println("Hello World!")
+  7. Run your program
+  	In Go, you cannot run your program without writing a command in the terminal
+	
+  	- You'll need to open the terminal. You can do that in VS code by going to the terminal tab in menu in the top left of the screen
+	- Click New Terminal
+	- When the new terminal is ready, make sure that it is in the directory you are working in. 
+	- Make sure Go is correctly installed. You can check this by typing go help. If the go keyword is yellow, that means it's been installed correctly
+	- Type go run program_name.go
 
 ## PLP 1
 
