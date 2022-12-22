@@ -34,6 +34,14 @@ func multiplyNums(a int, b int) {
 }
 
 //Write a recursive function (one that calculates a factorial is fine)
+// example from w3 schools
+func testcount(x int) int {
+  if x == 11 {
+    return 0
+  }
+  fmt.Println(x)
+  return testcount(x + 1)
+}
 
 // Write a function that takes in a string (or your language's equivalent) and splits it into two strings, then returns both strings
 func splitIntoTwo(sentence string) {
@@ -44,3 +52,5 @@ func splitIntoTwo(sentence string) {
 //Call your functions and save the results of the function calls in variables.
 
 //Write a function that tests whether your language is pass-by-reference or pass-by-value.
+
+//https://www.w3schools.com/go/go_function_recursion.php
